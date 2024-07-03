@@ -1,0 +1,255 @@
+{% extends "base.html"%}
+{% block title%} Index {%endblock title%}
+
+{% block stylesheets %}
+
+    <link href="{{ url_for('static',filename='estilos/estilosIndex.css') }}" rel="stylesheet" type="text/css">
+
+{%endblock%}
+
+
+
+{%block main%}
+        <!--DESCRIPCION SAMCO-->
+        <section class="quienesSomos">
+            <h2>
+                ¡Bienvenidos a SAMCO!
+            </h2>
+            <img src="../static/multimedia/logo.png" alt="logo de samco">
+            <p>
+                Somos mucho más que una simple marca de moda; somos una declaración de estilo. En Samco, nos dedicamos a ofrecerte lo último en tendencias de moda, fusionando calidad, diseño y confort en cada prenda que ofrecemos.
+                <br>
+                Nuestra misión es simple: inspirarte a expresarte a través de la moda, brindándote prendas que no solo te hagan lucir bien, sino que también te hagan sentir seguro y poderoso en cualquier ocasión.
+                
+                Con una amplia gama de productos cuidadosamente seleccionados, desde prendas casuales hasta atuendos elegantes para ocasiones especiales, estamos aquí para satisfacer tus necesidades de moda con estilo y distinción.
+                
+                En Samco, no solo vendemos ropa, sino que también ofrecemos una experiencia de compra única. Únete a nosotros en nuestro viaje hacia el estilo y la elegancia, ¡y descubre un mundo de posibilidades en cada prenda que elijas!
+                <br><br>
+                ¡Gracias por elegirnos para ser parte de tu estilo de vida!
+            </p>
+        </section>
+         <!--MISION-->
+        <section class="mision">
+            <h3>
+                Nuestra Misión
+            </h3>
+            <p>
+                En Samco, nuestra misión es empoderar a las personas a través de la moda, ofreciendo ropa de alta calidad y diseño innovador que refleje la 
+                individualidad y el estilo único de cada cliente. Nos comprometemos a utilizar materiales sostenibles y prácticas éticas en toda nuestra cadena 
+                de suministro, asegurando que cada prenda no solo se vea bien, sino que también haga el bien. Creemos en la moda accesible para todos y trabajamos 
+                para crear una experiencia de compra inclusiva y satisfactoria.
+            </p>
+            <img src="../static/multimedia/mision-de-una-empresa.jpg" alt="imagen de mision">    
+        </section>
+        <!--VALORES-->
+        <section class="valores">
+            <h3>
+                Nuestros Valores
+            </h3>
+            
+                <article>
+                    <h4>
+                        Integridad:
+                    </h4>
+                    <p>
+                        Actuamos con honestidad y transparencia en todas nuestras 
+                    </p>
+                </article>
+                <article>
+                    <h4>
+                        Innovación: 
+                    </h4>
+                    <p>
+                        Fomentamos la creatividad y la búsqueda constante de nuevas soluciones.
+                    </p>
+                </article>
+                <article>
+                    <h4>
+                        Calidad: 
+                    </h4>
+                    <p>
+                        Nos comprometemos a ofrecer productos y servicios de la más alta calidad.
+                    </p>
+                </article>
+                <article>
+                    <h4>
+                        Responsabilidad Social:
+                    </h4>
+                    <p>
+                        Contribuimos positivamente a nuestra comunidad y al medio ambiente.
+                    </p>
+                </article>
+            
+        </section>
+         <!--DIFERENCIALES-->
+        <section class="diferenciales">
+
+            <h3>
+
+            ¿Que Nos Hace Diferentes?
+            </h3>
+            
+                <img src="../static/multimedia/main-qimg-d12c1bc7ec27963c7727b0ebca6a5e28-lq.jfif" alt="que nos hace diferentes?">
+                <div class="contenedor-acordeon">
+                     <!--hacer acordeon desplegable-->
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon1" class="btn-acordeon">
+                        <label for="btn-acordeon1">Sostenibilidad y Ética</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Materiales Ecológicos:</b>Uso de telas orgánicas, recicladas o sostenibles.</li>
+                                <li><b>Prácticas Éticas:</b>Producción ética con salarios justos y condiciones de trabajo seguras.</li>
+                                <li><b>Transparencia:</b>Comunicación clara sobre la cadena de suministro y el impacto ambiental.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon2" class="btn-acordeon">
+                        <label for="btn-acordeon2">Diseño Innovador</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Estilo Único:</b>Diseños exclusivos que no se encuentran en otros lugares.</li>
+                                <li><b>Colaboraciones:</b>Asociaciones con artistas o diseñadores famosos para crear colecciones únicas.</li>
+                                <li><b>Tecnología Textil:</b>Incorporación de tecnología en la ropa, como telas inteligentes o funciones innovadoras.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon3" class="btn-acordeon">
+                        <label for="btn-acordeon3">Personalización</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Prendas a Medida:</b>Ofrecer opciones para personalizar el ajuste y el estilo.</li>
+                                <li><b>Diseños Personalizados:</b>Servicios que permiten a los clientes diseñar su propia ropa.</li>
+                                <li><b>Monogramas y Detalles Únicos:</b>Opciones para añadir monogramas, bordados o detalles personalizados.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon4" class="btn-acordeon">
+                        <label for="btn-acordeon4">Calidad Superior</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Materiales Premium:</b>Uso de materiales de alta calidad que aseguran durabilidad y confort.</li>
+                                <li><b>Artesanía:</b>Atención meticulosa a los detalles y acabado artesanal.</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon5" class="btn-acordeon">
+                        <label for="btn-acordeon5">Experiencia del Cliente</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Atención Personalizada:</b>Servicio al cliente excepcional, con asesores de moda disponibles.</li>
+                                <li><b>Compra Omnicanal:</b> Integración fluida de experiencias de compra en línea y en tienda.</li>
+                                <li><b>Programas de Fidelización:</b> Recompensas y beneficios exclusivos para clientes recurrentes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="contenedor-acordeon">
+<!--hacer acordeon desplegable-->
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon6" class="btn-acordeon">
+                        <label for="btn-acordeon6">Innovación en el Proceso de Compra</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Compra Sostenible:</b>Programas de reciclaje y recompra de prendas usadas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon7" class="btn-acordeon">
+                        <label for="btn-acordeon7">Compromiso con la Comunidad</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Proyectos Sociales:</b>Iniciativas que apoyan a comunidades locales y causas benéficas.</li>
+                                <li><b>Producción Local:</b>Apoyo a la economía local mediante la producción en el país de origen.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon8" class="btn-acordeon">
+                        <label for="btn-acordeon8">Innovación en el Marketing</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Marketing de Influencers:</b>Colaboraciones con influencers relevantes y auténticos.</li>
+                                <li><b>Contenido Generado por Usuarios:</b>Fomentar y compartir contenido creado por los clientes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon9" class="btn-acordeon">
+                        <label for="btn-acordeon9">Inclusividad y Diversidad</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Tallas Inclusivas:</b>Amplia gama de tallas y estilos que se adapten a todos los tipos de cuerpo.</li>
+                                <li><b>Representación Diversa:</b>Campañas publicitarias que representen una variedad de razas, géneros y edades.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="acordeon">
+                        <input type="radio" name="acordeon" id="btn-acordeon10" class="btn-acordeon">
+                        <label for="btn-acordeon10">Innovación en Sostenibilidad</label>
+                        <div class="contenido-acordeon">
+                            <ul>
+                                <li><b>Economía Circular:</b>Programas de reciclaje de ropa y productos diseñados para ser reutilizados o reciclados al final de su vida útil.</li>
+                                <li><b>Reducción de Huella de Carbono:</b>Estrategias para minimizar la huella de carbono en todas las etapas de la producción y distribución.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        </section>
+        <section class="nuestroFuturo">
+            
+            <h3>
+                Nuestro Compromiso con el Futuro
+            </h3>
+                <div class="column">
+                    <img src="../static/multimedia/14_LEFTIES20ARE20WOMAN2022.webp" alt="ropa deportiva">
+                    <p>
+                        1. Expansión de la Línea de Productos
+                        <br><br>
+                        Nuevas Colecciones: Lanzar nuevas colecciones estacionales o temáticas.
+                        Accesorios y Complementos: Incluir accesorios como bolsos, joyería, calzado, etc.
+                        Ropa Deportiva y Activa: Ampliar la oferta para incluir ropa deportiva y de actividad física.
+                    </p>
+                </div>
+                <div class="column">
+                    <img src="../static/multimedia/Argentina_Chile_Geography_South_America_map_584312_1280x852.jpg" alt="imagen de mapa de argentina">
+                    <p>
+                        2. Expansión Geográfica
+                        <br><br>
+                        Nuevos Mercados: Entrar en nuevos mercados nacionales e internacionales.
+                        Tiendas Físicas: Abrir nuevas tiendas en ubicaciones estratégicas.
+                        Plataformas de Venta Online: Expandirse a nuevas plataformas de comercio electrónico globales.
+                    </p>
+                </div>
+                <div class="column-rev">
+                    <p>
+                        3. Innovación en Sostenibilidad
+                        <br><br>
+                        Economía Circular: Implementar programas de reciclaje y reutilización de ropa.
+                        Materiales Ecológicos: Desarrollar e incorporar nuevos materiales sostenibles y biodegradables.
+                        Certificaciones: Obtener certificaciones de sostenibilidad reconocidas internacionalmente.
+                    </p>
+                    <img src="../static/multimedia/ropa-ecologica.jpg" alt="ropa ecologica">
+                </div>
+                <div class="column-rev">
+                    <p>
+                        4. Colaboraciones y Asociaciones
+                        <br><br>
+                        Colaboraciones con Diseñadores: Trabajar con diseñadores reconocidos para colecciones exclusivas.
+                        Asociaciones con Influencers: Asociarse con influencers y celebridades para aumentar la visibilidad de la marca.
+                        Proyectos Comunitarios: Colaborar con organizaciones locales para iniciativas de responsabilidad social.
+                    </p>
+                    <img src="../static/multimedia/inspirar-colaboracion1.jpeg" alt="colaboracion">
+                </div>   
+        </section>
+
+
+
+{%endblock main%}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} ACA DEBEN MODIFICAR EL NOMBRE DE CADA WEB {% endblock title%} </title>
+    
+    <link href="{{ url_for('static',filename='estilos/estilosGlobales.css') }}" rel="stylesheet" type="text/css">
+    
+    {% block stylesheets %}
+    
+    <link href="{{ url_for('static',filename='estilos/estilosIniciarSesion.css') }}" rel="stylesheet" type="text/css">
+    {%endblock%}
+    <!--<link rel="stylesheet" href="../estilos/estilosGlobales.css">
+    <link rel="stylesheet" href="../estilos/estilosIniciarSesion.css">
+    <link rel="icon" href="../" >-->
+    
+    <link rel="icon" href="{{ url_for('static',filename='multimedia/logo.ico') }}" type="img-icon" >
+    
+    <script src="https://kit.fontawesome.com/12af3073e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+            <nav class="busqueda">
+                <a class="navegacion1" href="{{url_for('index')}}"><img src="../static/multimedia/logo-Photoroom.png-Photoroom.png" alt="icono samco"></a>
+                <!-- <a href="../index.html"><img src="../static/multimedia/logo-Photoroom.png-Photoroom.png" alt="icono samco"></a>-->
+                <form id="formBusqueda">
+                    <input class="search" type="search" placeholder="buscar">
+                </form>
+                
+                <div class="ingresoUsuario">
+                    <a class="iniciarSesion" href="{{url_for('iniciarSesion')}}">{{session["inisesion"]}}</a>
+                    <a class="registrar" href="{{url_for('registrar')}}">{{session["registrarse"]}}</a>
+                </div>
+            
+            </nav>
+        <nav class="menu">
+            <a class="navegacion" href="{{url_for('index')}}">Quienes Somos</a>
+            <a class="navegacion" href="{{url_for('productos')}}">Productos</a>
+            <a class="navegacion" href="{{url_for('contactanos')}}">Contactanos</a>
+            <a class="navegacion" href="{{url_for('sucursales')}}">Sucursales</a>
+        </nav>
+
+    </header>
+    <main>
+        {%block main%}
+            ACA VA EL MAIN DE CADA WEB
+        {%endblock main%}
+
+    </main>
+    
+    <footer>
+        <div id="redes">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </footer>
+    {%block script%}
+    {%endblock script%}
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+{% extends "base.html"%}
+{% block title%} Productos {%endblock title%}
+
+{% block stylesheets %}
+
+    <link href="{{ url_for('static',filename='estilos/estilosRegistrar.css') }}" rel="stylesheet" type="text/css">
+
+{%endblock%}
+
+    {%block main%}
+        <h2>¡Unete a Nosotros!</h2>
+        <form  id="formulario">
+            <fieldset>
+                 <legend><b>Datos Personales</b></legend>
+                <div class="caja">
+                <div class="texto">
+                    <label for="nombre">Nombre<i class="obligatorio">*</i>: </label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre aqui...">
+                </div>
+                <div class="texto">
+                    <label for="apellido">Apellido<i class="obligatorio">*</i>: </label>
+                    <input type="text" name="apellido" id="apellido"  placeholder="Ingrese su apellido aqui..." >
+                </div> 
+                <div class="texto">
+                    <label for="dni">DNI<i class="obligatorio">*</i>: </label>
+                    <input type="text" name="dni"  id="dni" placeholder="XXXXXXXX" maxlength="8" >
+                </div> 
+                <div class="texto">
+                    <label for="cumpleanios">Fecha Nac: </label>
+                    <input type="date" name="cumpleanios" id="cumpleanios">
+                </div> 
+                <div class="opciones">
+                    <div>
+
+                        <label for="genero1">Hombre</label><input type="radio" name="genero" id="genero1" value="1">
+                    </div>
+                    <div>
+
+                        <label for="genero2">Mujer</label><input type="radio" name="genero" id="genero2" value="2">
+                    </div>
+                    <div>
+
+                        <label for="genero3">Otro</label><input type="radio" name="genero" id="genero3" value="3">
+                    </div>
+                </div>
+            </div>
+            </fieldset>
+            
+            <p id="rtaForm"></p>
+            <div class="botones">
+
+                <input type="reset" name="borrar" value="BORRAR">
+                <input type="submit" value="ENVIAR">
+            </div>
+            
+        </form>
+        {%endblock main%}
+
+    {%block script%}
+    <script src="../dinamico/validacionRegistro.js"></script>
+    {%endblock script%}
+</body>
+</html>

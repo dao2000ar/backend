@@ -1,0 +1,31 @@
+{% extends "base.html"%}
+{% block title%} Iniciar Sesion {%endblock title%}
+
+
+{%block main%}
+
+
+
+        
+    <h2>Inicio De Sesion</h2>
+    <form class="form-control" action="acceso-login" method="post"  id="formulario">
+       
+            <input class="correo"  type="email" id="correo" name="txtCorreo"  placeholder="correo electronico" >
+        
+        
+            <input class="contraseña" type="password" id="clave"  name= "txtPassword" placeholder="Contraseña">
+        
+        <p>¿olvido su contraseña?</p>
+        <p id="rtaForm"></p>
+        <input type="submit" name="iniciar" value="iniciar sesion">
+        {% if mensaje %}
+            <p>{{ mensaje }}</p>
+        {% endif %}
+    
+    </form>
+
+{%endblock main%}
+
+{%block script%}
+<script src="../dinamico/validacionIniciarSesion.js"></script>
+{%endblock script%}
